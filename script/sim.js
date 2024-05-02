@@ -13,7 +13,7 @@ module.exports.run = async function({ api, event, args }) {
     const input = args.join(" ");
 
     if (!input) {
-        api.sendMessage("Please provide a text prompt. Usage: sim [text]", event.threadID, event.messageID);
+        api.sendMessage("Aysig tawag nako naa nakoy uyab.", event.threadID, event.messageID);
         return;
     }
     try {  
