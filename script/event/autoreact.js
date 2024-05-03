@@ -26,8 +26,8 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
     api.setMessageReaction("", event.messageID, (err) => {}, true)
     api.sendMessage("", event.threadID,event.messageID);
   }
-  if (haha.includes("tite") || haha.includes("Tite")){
-    api.sendMessage("tite ka ng tite lika dito subuin moto.", event.threadID, event.messageID)
+  if (haha.includes("") || haha.includes("")){
+    api.sendMessage("", event.threadID, event.messageID)
   }
   if (haha.includes("What if") || haha.includes("what if")){
     api.sendMessage("what if bobo ka?", event.threadID, event.messageID)
@@ -41,7 +41,11 @@ if (haha.includes("good night") || haha.includes("night")){
 if (haha.includes("ib") || haha.includes("inbox")){
     api.sendMessage("Baho kag giti/ulok ", event.threadID, event.messageID)
 }
-  if (haha.includes("nat") || haha.includes("nats")){
+  if (haha.includes("nat") || haha.includes("natsuki")){
+    api.sendMessage("aysig pangita sa owner kung wakay balak mochat niya.", event.threadID, event.messageID)
+      }
+      
+      if (haha.includes("natsuki") || haha.includes("natnat")){
     api.sendMessage("aysig pangita sa owner kung wakay balak mochat niya.", event.threadID, event.messageID)
       }
 }
