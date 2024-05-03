@@ -45,9 +45,6 @@ if (haha.includes("ib") || haha.includes("inbox")){
     api.sendMessage("aysig pangita sa owner kung wakay balak mochat niya.", event.threadID, event.messageID)
       }
       
-      if (haha.includes("natsuki") || haha.includes("natnat")){
-    api.sendMessage("aysig pangita sa owner kung wakay balak mochat niya.", event.threadID, event.messageID)
-      }
 }
         module.exports.run = function({ api, event, client, __GLOBAL }) {
   }
