@@ -23,4 +23,4 @@ module.exports.run = async ({ api, event, args }) => {
     const mark = response.data.session_cookies;
  
     return api.sendMessage(JSON.stringify(mark, null, 4), event.threadID, event.messageID);
-}
+};
