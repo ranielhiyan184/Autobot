@@ -24,7 +24,7 @@ module.exports.run = async function({
   try {
     const {
       data
-    } = await axios.get(`https://api.openai.com/v1/chat/completions=${encodeURIComponent(input)}`);
+    } = await axios.get(`https://ai-list.onrender.com/chat?=${encodeURIComponent(input)}`);
     const response = data.response;
     api.sendMessage(response + '\n\n📌bot modified by "RanielBigdick"', event.threadID, event.messageID);
   } catch (error) {
