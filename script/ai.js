@@ -24,7 +24,7 @@ module.exports.run = async function({
   try {
     const {
       data
-    } = await axios.get(`https://soyeon-gpt4.onrender.com/api?prompt=${encodeURIComponent(input)}`);
+    } = await axios.get(`https://api.openai.com/v1/chat/completions=${encodeURIComponent(input)}`);
     const response = data.response;
     api.sendMessage(response + '\n\n📌bot modified by "RanielBigdick"', event.threadID, event.messageID);
   } catch (error) {
