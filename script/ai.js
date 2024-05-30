@@ -15,25 +15,19 @@ module.exports.run = async function({
   event,
   args
 }) {
-  const axios = require('axios');
-
-const payload = {
-  model: 'gpt-4', // gpt-4o or gpt-4
-  messages: [
-    {
-      role: 'user',
-      content: 'hello'
-    }
-  ],
-  apikey: `https://ai-list.onrender.com/chat?model=llama2&message=what%20is%20love%3F=${input}`
-// get here apikey for gpt-4o: https://gpt4o-apikey.vercel.app/gen and use sk-hiroshikim for gpt-4
+  const input = args.join(' ');
+  if (!input) {
+    api.sendMessage(`Please provide a question or statement after 'ai'. For example: 'ai What is the capital of France?'`, event.threadID, event.messageID);
+    return;
+  }
+  api.sendMessage(`🔍 "${input}"`, event.threadID, event.messageID);
+  try {
+    const {
+      data
+    } = await axios.get(`https://ai-list.onrender.com/chat?model=llama2&message=what%20is%20love%3F=${input}`);
+    const response = data.response;
+    api.sendMessage(response + '\n\n📌bot modified by "RanielBigdick"', event.threadID, event.messageID);
+  } catch (error) {
+    api.sendMessage('An error occurred while processing your request.', event.threadID, event.messageID);
+  }
 };
-
-axios.post('http://openai-api.replit.app/v1/chat/completions', payload)
-  .then(response => {
-    console.log('Response:', response.data);
-  })
-  .catch(error => {
-    api.sendMessage('Error:', error.response.data);
- 
-  });
