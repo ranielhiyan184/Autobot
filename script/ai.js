@@ -15,21 +15,22 @@ module.exports.run = async function({
   event,
   args
 }) {
-  const input = args.join(' ');
+  
+const input = args.join(' ');
   if (!input) {
-    api.sendMessage(`Please provide a question or statement after 'ai'. For example: 'ai What is the capital of France?'`, event.threadID, event.messageID);
+    api.sendmessage(`Please provide a question or statement after 'ai'. For example: 'ai what is the capital of France?'`, event.threadid, event.messageid);
     return;
   }
-  api.sendMessage(`🔍 "${input}"`, event.threadID, event.messageID);
+  api.sendmessage(`🔍 "${input}"`, event.threadid, event.messageid);
   try {
-    
-const {
-  data
-} = await axios.get(`https://ai-list.onrender.com/chat?model=llama2&message=what%20is%20love%3f=${input}`);
-const response = data.response;
-api.sendmessage(response + '\n\n📌bot developed by Neuronspike', event.threadid, event.messageid);
-} catch (error) {
-  api.sendmessage('An error occurred while processing your request.', event.threadid, event.messageid);
-}
+    const {
+      data
+    } = await axios.get(`https://api.ai-list.tech/chat?model=llama2&message=${encodeURIComponent(input)}&lang=en&key=YOUR_API_KEY`);
+    const response = data.response;
+    api.sendmessage(response + '\n\n📌Bot developed by Neuronspike', event.threadid, event.messageid);
+  } catch (error) {
+    console.error(error);
+    api.sendmessage(`Sorry, I couldn't process your request. Please try again later.`, event.threadid, event.messageid);
+  }
 
 };
