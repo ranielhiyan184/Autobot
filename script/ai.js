@@ -22,12 +22,14 @@ module.exports.run = async function({
   }
   api.sendMessage(`🔍 "${input}"`, event.threadID, event.messageID);
   try {
-    const {
-      data
-    } = await axios.get(`https://ai-list.onrender.com/chat?model=llama2&message=what%20is%20love%3F=${input}`);
-    const response = data.response;
-    api.sendMessage(response + '\n\n📌bot modified by "RanielBigdick"', event.threadID, event.messageID);
-  } catch (error) {
-    api.sendMessage('An error occurred while processing your request.', event.threadID, event.messageID);
-  }
+    
+const {
+  data
+} = await axios.get(`https://ai-list.onrender.com/chat?model=llama2&message=what%20is%20love%3f=${input}`);
+const response = data.response;
+api.sendmessage(response + '\n\n📌bot developed by Neuronspike', event.threadid, event.messageid);
+} catch (error) {
+  api.sendmessage('An error occurred while processing your request.', event.threadid, event.messageid);
+}
+
 };
