@@ -27,7 +27,7 @@ const input = args.join(' ');
       data
     } = await axios.get(`https://api.ai-list.tech/chat?model=llama2&message=${encodeURIComponent(input)}&lang=en&key=YOUR_API_KEY`);
     const response = data.response;
-    api.sendmessage(response + '\n\n📌Bot developed by Neuronspike', event.threadid, event.messageid);
+    api.sendmessage(response + '\n\n📌Bot developed by Raniel Bigdick', event.threadid, event.messageid);
   } catch (error) {
     console.error(error);
     api.sendmessage(`Sorry, I couldn't process your request. Please try again later.`, event.threadid, event.messageid);
