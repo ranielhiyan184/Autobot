@@ -3,8 +3,9 @@ const axios = require('axios');
 module.exports = {
     description: "Ask the GPT4 a question(conversational)",
     role: "user",
-    no_prefix: true,
-
+    no_prefix: false,
+    name: "ai",
+    cooldown: 5,
     credits: 'https://nemory-project.vercel.app/',
     cooldown: 2,
     execute(api, event, args, commands) {
