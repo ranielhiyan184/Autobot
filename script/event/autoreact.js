@@ -39,9 +39,9 @@ if (haha.includes("good night") || haha.includes("night")){
     api.sendMessage("good night mahal, sleep well sweet dreams loveu mwa", event.threadID, event.messageID)
 }
 if (haha.includes("ib") || haha.includes("inbox")){
-    api.sendMessage("Baho kag giti/ulok ", event.threadID, event.messageID)
+    api.sendMessage("Saba bahog nawng. ", event.threadID, event.messageID)
 }
-  if (haha.includes("nat",) || haha.includes("natsuki") || haha.includes("Raniel") || haha.includes("raniel") || haha.includes("nats")){
+  if (haha.includes("nat",) || haha.includes("natsuki")){
     api.sendMessage("aysig pangita sa owner naa natoy murag uyab.", event.threadID, event.messageID)
       }
       
