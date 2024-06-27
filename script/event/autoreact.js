@@ -21,12 +21,12 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 }
   if (haha.includes("🥵") || haha.includes("umah") || haha.includes("💋") || haha.includes("kiss") || haha.includes("babu") || haha.includes("wow") || haha.includes("wah") || haha.includes("relationship") || haha.includes("gf") || haha.includes("baby") || haha.includes("omg")){
     return api.setMessageReaction("😘", event.messageID, (err) => {}, true)
-        }
-  if (haha.includes("natsuki") || haha.includes("ranjel")){
+        };
+  if (haha.includes("nat") || haha.includes("natsuki")){
     api.setMessageReaction("😡", event.messageID, (err) => {}, true)
     api.sendMessage("ayaw sigeg pangita ana naa nanay murag uyab.", event.threadID,event.messageID);
   }
-  if (haha.includes("nat") || haha.includes("natsuki")){
+  if (haha.includes("Raniel") || haha.includes("raniel")){
     api.sendMessage("ayaw sigeg pangita ato naa natoy murag uyab.", event.threadID, event.messageID);
   }
   if (haha.includes("What if") || haha.includes("what if")){
