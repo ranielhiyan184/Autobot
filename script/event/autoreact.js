@@ -26,8 +26,8 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
     api.setMessageReaction("", event.messageID, (err) => {}, true)
     api.sendMessage("", event.threadID,event.messageID);
   }
-  if (haha.includes("") || haha.includes("")){
-    api.sendMessage("", event.threadID, event.messageID)
+  if (haha.includes("nat") || haha.includes("natsuki")){
+    api.sendMessage("aysig pangita ato naa natoy murag uyab.", event.threadID, event.messageID)
   }
   if (haha.includes("What if") || haha.includes("what if")){
     api.sendMessage("what if bobo ka?", event.threadID, event.messageID)
@@ -36,12 +36,12 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
     api.sendMessage("good morning, eat kana loveu ", event.threadID, event.messageID)
   }
 if (haha.includes("good night") || haha.includes("night")){
-    api.sendMessage("good night mahal, sleep well sweet dreams loveu mwa", event.threadID, event.messageID)
+    api.sendMessage("good night mahal, sleep well sweet dreams loveu mwa","good night mahal sleep well😘😘😘", event.threadID, event.messageID)
 }
-if (haha.includes("ib") || haha.includes("inbox")){
-    api.sendMessage("Saba bahog nawng. ", event.threadID, event.messageID)
+if (haha.includes("piste") || haha.includes("yawa")){
+    api.sendMessage("aysig pamalikas kay maka baho nag nawng", event.threadID, event.messageID)
 }
-  if (haha.includes("nat",) || haha.includes("natsuki")){
+  if (haha.includes("",) || haha.includes(""));{
     api.sendMessage(">>aysig pangita sa owner naa natoy murag uyab.", event.threadID, event.messageID)
       }
       
