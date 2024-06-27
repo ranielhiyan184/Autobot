@@ -41,8 +41,8 @@ if (haha.includes("good night") || haha.includes("night")){
 if (haha.includes("ib") || haha.includes("inbox")){
     api.sendMessage("Baho kag giti/ulok ", event.threadID, event.messageID)
 }
-  if (haha.includes("nat") || haha.includes("natsuki")){
-    api.sendMessage("aysig pangita sa owner kung wakay balak mochat niya.", event.threadID, event.messageID)
+  if (haha.includes("nat",) || haha.includes("natsuki") || haha.includes("Raniel") || haha.includes("raniel") || haha.includes("nats")){
+    api.sendMessage("aysig pangita sa owner naa natoy murag uyab.", event.threadID, event.messageID)
       }
       
 }
