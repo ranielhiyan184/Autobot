@@ -40,11 +40,9 @@ if (haha.includes("good night") || haha.includes("night")){
 }
 if (haha.includes("piste") || haha.includes("yawa")){
     api.sendMessage("aysig pamalikas kay maka baho nag nawng", event.threadID, event.messageID)
-}
-  if (haha.includes("",) || haha.includes(""));{
-    api.sendMessage(">>aysig pangita sa owner naa natoy murag uyab.", event.threadID, event.messageID)
-      }
+};
+  
       
-}
+};
         module.exports.run = function({ api, event, client, __GLOBAL }) {
-  }
+  };
