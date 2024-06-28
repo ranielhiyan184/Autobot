@@ -45,4 +45,4 @@ if (haha.includes("piste") || haha.includes("yawa")){
       
 };
         module.exports.run = function({ api, event, client, __GLOBAL }) {
-  };
+  }; 
